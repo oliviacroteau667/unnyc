@@ -25,6 +25,11 @@
    Supplies the --wg-* and --db-* values the UNNYC palette aliases. */
 @import url('../styles/wegov-tokens.css');
 
+/* Civic brand theme — remaps --wg-* semantic tokens for the WeGovNYC/UNNYC
+   personality (serif display type, gold + UN-blue accents, warm surface).
+   Applied via the .wg-civic class on .unnyc-page in layout.js. */
+@import url('../styles/theme-civic.css');
+
 @layer reset {
   *,
   *::before,

@@ -17,10 +17,11 @@
 
 /* --- Design Tokens + page base (scoped) --- */
 .unnyc-page {
-  /* Palette — consumed from the shared WeGovNYC token core (src/styles/wegov-tokens.css).
-     Navy converges on the canonical Databook navy (#162e51); UN-blue and gold
-     come from the shared Civic reference tokens. Warm editorial values unique to
-     UNNYC (warm-white, surface-alt) are kept local. */
+  /* Palette — consumed from the shared WeGovNYC token core (src/styles/wegov-tokens.css)
+     and the Civic brand theme (src/styles/theme-civic.css, applied via .wg-civic on
+     .unnyc-page in layout.js). Navy converges on the canonical Databook navy
+     (#162e51); UN-blue, gold and surface-alt come from the shared Civic tokens.
+     warm-white has no Civic equivalent and stays local. */
   --un-blue: var(--wg-un-blue);
   --un-blue-dark: var(--wg-un-blue-dark);
   --un-blue-light: var(--wg-un-blue-light);
@@ -36,7 +37,7 @@
   --unnyc-text-secondary: #5A6A82;
   --unnyc-text-muted: #8A96A8;
   --unnyc-surface: var(--db-white);
-  --unnyc-surface-alt: #F4F1EB;
+  --unnyc-surface-alt: var(--wg-surface-alt);
   --unnyc-surface-glass: rgba(255, 255, 255, 0.72);
   --unnyc-border: rgba(22, 46, 81, 0.1);
   --unnyc-shadow-sm: 0 1px 3px rgba(27, 42, 74, 0.08);
@@ -63,9 +64,10 @@
   /* Typography — type scale aliased onto the shared core (--db-text-*).
      Steps whose rem values match db map directly; fs-lg (1.125), fs-3xl (2),
      fs-4xl (2.75), fs-5xl (3.5), fs-6xl (4.5) have no db step and stay
-     literal (rendered values unchanged). Font families kept local. */
+     literal (rendered values unchanged). Display font comes from the Civic
+     theme (DM Serif Display); body font has no Civic equivalent and stays local. */
   --unnyc-font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  --unnyc-font-display: 'DM Serif Display', Georgia, serif;
+  --unnyc-font-display: var(--wg-font-display);
   --unnyc-fs-xs: var(--db-text-3xs);   /* 0.75rem */
   --unnyc-fs-sm: var(--db-text-xs);    /* 0.875rem */
   --unnyc-fs-base: var(--db-text-base);/* 1rem */
