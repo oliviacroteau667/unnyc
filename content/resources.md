@@ -21,7 +21,11 @@ foot:
 # names the sections already on the page. Deliberately claim-free and number-free
 # — counts belong in the components that derive them, never in prose that can
 # drift. Reword freely, but don't delete them.
-title: "Related Resources"
+# `title` carries its own <span> for the underlined word, same convention as
+# content/start.md's `title` and content/principles.md's `heroTitle`.
+title: "Related <span>Resources</span>"
+# Storyscroller hero eyebrow (UnnycResourcesStoryscroller).
+heroKicker: "Resources"
 lede: "Where to read further, and who to call — primary sources from the UN and the City, the communities doing this work, and a directory of public sector open source programme offices."
 meta:
   title: "Related Resources — UNNYC"
